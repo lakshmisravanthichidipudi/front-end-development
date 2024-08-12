@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 10px black;
+            margin: 20px auto;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .movie-card {
+            background-color: #fff;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+            box-shadow:10px 5px 5px rgba(57, 55, 55, 0.1);
+        }
+        .movie-card img{
+            width: 100%;
+            height: auto;
+        }
+        .movie-card .info {
+            padding: 10px;
+        }
+        .movie-card .info h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+        .movie-card .info p {
+            margin: 0;
+            color: #444242;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Library</h1>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for movies...">
+        </div>
+        <div class="movies">
+            <!-- Movie Card 1 -->
+            <div class="movie-card">
+                <img src='arya2.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Arya 2</h3>
+                    <p>Release Year: 2009</p>
+                </div>
+            </div>
+            <!-- Movie Card 2 -->
+            <div class="movie-card">
+                <img src="goatlife.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Goat Life</h3>
+                    <p>Release Year: 2024</p>
+                </div>
+            </div>
+            <!-- Movie Card 3 -->
+            <div class="movie-card">
+                <img src='hinanna.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Hi Nanna</h3>
+                    <p>Release Year: 2023</p>
+                </div>
+            </div>
+            <!-- Movie Card 4 -->
+            <div class="movie-card">
+                <img src="virataparvam.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Viraata Parvam</h3>
+                    <p>Release Year: 2021</p>
+                </div>
+            </div>
+            <!-- Movie Card 5 -->
+            <div class="movie-card">
+                <img src="bahubali1.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Bahubali 1</h3>
+                    <p>Release Year: 2015</p>
+                </div>
+            </div>
+            <!-- Movie Card 6-->
+            <div class="movie-card">
+                <img src='bahubali2.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Bahubali 2</h3>
+                    <p>Release Year: 2017</p>
+                </div>
+            </div>
+            <!-- Movie Card 7 -->
+            <div class="movie-card">
+                <img src="darling.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Darling</h3>
+                    <p>Release Year: 2010</p>
+                </div>
+            </div>
+            <!-- Movie Card 8-->
+            <div class="movie-card">
+                <img src="arundhathi.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Arundhathi</h3>
+                    <p>Release Year: 2009</p>
+                </div>
+            </div>
+            <!-- Movie Card 9 -->
+            <div class="movie-card">
+                <img src='janathagarag.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Janatha Garage</h3>
+                    <p>Release Year: 2016</p>
+                </div>
+            </div>
+            <!-- Movie Card 10 -->
+            <div class="movie-card">
+                <img src="jersey.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Jersey</h3>
+                    <p>Release Year: 2019</p>
+                </div>
+            </div>
+            <!-- Movie Card 11 -->
+            <div class="movie-card">
+                <img src='kushi.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Kushi</h3>
+                    <p>Release Year: 2001</p>
+                </div>
+            </div>
+            <!-- Movie Card 12 -->
+            <div class="movie-card">
+                <img src="mahanati.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Mahanati</h3>
+                    <p>Release Year: 2018</p>
+                </div>
+            </div>
+            <!-- Movie Card 13 -->
+            <div class="movie-card">
+                <img src='majili.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Majili</h3>
+                    <p>Release Year: 2019</p>
+                </div>
+            </div>
+            <!-- Movie Card 14 -->
+            <div class="movie-card">
+                <img src="missionimpossible.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Mission Impossible</h3>
+                    <p>Release Year: 2022</p>
+                </div>
+            </div>
+            <!-- Movie Card 15 -->
+            <div class="movie-card">
+                <img src="KGF.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>KGF</h3>
+                    <p>Release Year: 2022</p>
+                </div>
+            </div>
+            <!-- Movie Card 16-->
+            <div class="movie-card">
+                <img src='suryaSoOkrishnan.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>Surya S/O Krishnan</h3>
+                    <p>Release Year: 2008</p>
+                </div>
+            </div>
+            <!-- Movie Card 17 -->
+            <div class="movie-card">
+                <img src="pokiri.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Pokiri</h3>
+                    <p>Release Year: 2006</p>
+                </div>
+            </div>
+            <!-- Movie Card 18-->
+            <div class="movie-card">
+                <img src="roja.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Roja</h3>
+                    <p>Release Year: 1992</p>
+                </div>
+            </div>
+            <!-- Movie Card 19 -->
+            <div class="movie-card">
+                <img src='RRR.jpg' alt="Movie Poster">
+                <div class="info">
+                    <h3>RRR</h3>
+                    <p>Release Year: 2022</p>
+                </div>
+            </div>
+            <!-- Movie Card 20 -->
+            <div class="movie-card">
+                <img src="siva.jpg" alt="Movie Poster">
+                <div class="info">
+                    <h3>Siva</h3>
+                    <p>Release Year: 1989</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

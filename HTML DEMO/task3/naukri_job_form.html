@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color:#370443;
+            background-color: #781097;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 800;
+        }
+        .details{
+            font-weight: 800;
+            font-style: oblique;
+            color: #29024d;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            background-color:  #681684;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #570772;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: rgb(161, 97, 195);">
+        <h2>Job Registration Form</h2>
+        <form action="/submit-registration" method="post">
+            <div class="form-group">
+                <label for="fullName"><span class="details">Full Name:</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><span class="details">Email Address:</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"><span class="details">Phone Number:</span></label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address"><span class="details">Address:</span></label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education"><span class="details">Highest Level of Education:</span></label>
+                <select id="education" name="education" required>
+                    <option value=""><span class="details">Select</span></option>
+                    <option value="highschool"><span class="details">High School</span></option>
+                    <option value="bachelor"><span class="details">Bachelor's Degree</span></option>
+                    <option value="master"><span class="details">Master's Degree</span></option>
+                    <option value="doctorate"><span class="details">Doctorate</span></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience"><span class="details">Years of Experience:</span></label>
+                <input type="number" id="experience" name="experience" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="resume"><span class="details">Upload Resume:</span></label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group">
+                <button type="submit"><span class="details">Register</span></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
