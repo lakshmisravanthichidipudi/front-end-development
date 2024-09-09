@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Example</title>
+    <style>
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="colorBox">Hover me!</div>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+        const colorBox = document.getElementById('colorBox');
+        const changeColorButton = document.getElementById('changeColorButton');
+
+        // Event Listener for Button Click
+        changeColorButton.addEventListener('click', function() {
+            colorBox.style.backgroundColor = colorBox.style.backgroundColor === 'lightblue' ? 'lightgreen' : 'lightblue';
+        });
+
+        // Event Listener for Mouse Hover
+        colorBox.addEventListener('mouseover', function() {
+            colorBox.textContent = 'Hello!';
+        });
+
+        colorBox.addEventListener('mouseout', function() {
+            colorBox.textContent = 'Hover me!';
+        });
+    </script>
+
+</body>
+</html>

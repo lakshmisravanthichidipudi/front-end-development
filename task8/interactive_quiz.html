@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .quiz-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .question {
+            font-size: 20px;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-bottom: 30px;
+        }
+        .options label {
+            display: block;
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            display: none;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What does HTML stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A" required> A) Hyper Text Markup Language</label>
+                    <label><input type="radio" name="q1" value="B"> B)  Hyperlinks and Text Markup Language</label>
+                    <label><input type="radio" name="q1" value="C"> C) High-Level Text Markup Language</label>
+                    <label><input type="radio" name="q1" value="D"> D) Hypertext Markup Linguistics</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2.Which of the following tags is used to define a table in HTML?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A" required> A) "table"</label>
+                    <label><input type="radio" name="q2" value="B"> B) "tab"</label>
+                    <label><input type="radio" name="q2" value="C"> C) "tbl"</label>
+                    <label><input type="radio" name="q2" value="D"> D) "t"</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What is the correct HTML tag for inserting a line break?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A" required> A) "break"</label>
+                    <label><input type="radio" name="q3" value="B"> B) "lb"</label>
+                    <label><input type="radio" name="q3" value="C"> C) "br"</label>
+                    <label><input type="radio" name="q3" value="D"> D) "linebreak"</label>
+                </div>
+            </div>
+            
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+
+        <div class="result" id="result">
+            Your Score: <span id="score"></span>/3
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let score = 0;
+
+    
+            if (document.querySelector('input[name="q1"]:checked').value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked').value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked').value === 'C') {
+                score++;
+            }
+
+
+            document.getElementById('score').textContent = score;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
